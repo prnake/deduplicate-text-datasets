@@ -1305,7 +1305,7 @@ fn cmd_merge(data_files: &Vec<String>, output_file: &String, num_threads: i64)  
                 continue;
             }
 
-            if idxs[table_index] <= ends[table_index] as u64 {
+            if idxs[table_index] < ends[table_index] as u64 {
                 let next = &texts[table_index][position as usize..];
                 //println!("  {:?}", &next[..std::cmp::min(10, next.len())]);
 
